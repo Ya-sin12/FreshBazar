@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>আপনার কার্ট | FreshBazar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+    <nav class="navbar">
+        <div class="logo"><a href="index.html">Fresh<span>Bazar</span></a></div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="cart.html" class="active">Cart</a>
+            <a href="checkout.html">Checkout</a>
+        </div>
+        <div class="cart-icon-wrapper">
+            <a href="cart.html" class="cart-basket-btn"><i class="fa-solid fa-basket-shopping"></i></a>
+            <span id="cart-count">০</span>
+        </div>
+    </nav>
+</header>
+
+    <main class="shop-container max-width-cart">
+        <div class="section-title">
+            <h2>আপনার <span class="green-text">বাজারের ঝুড়ি</span></h2>
+        </div>
+
+        <div class="cart-box">
+            <div id="cart-items-container">
+                </div>
+        </div>
+
+        <div class="cart-total-section">
+            <input type="text" id="coupon-input" placeholder="কুপন কোড লিখুন">
+            <button onclick="applyCoupon()">Apply</button>          
+            <h3>সর্বমোট: <span class="green-text" id="cart-total-amount">৳০</span></h3>
+            <a href="checkout.html" class="cta-btn">অর্ডার করতে এগিয়ে যান <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

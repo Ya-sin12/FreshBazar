@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>আমাদের দোকান | FreshBazar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="index.html">Fresh<span>Bazar</span></a></div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="shop.html" class="active">Shop</a>
+                <a href="cart.html">Cart</a>
+                <a href="checkout.html">Checkout</a>
+            </div>
+            <a href="cart.html" class="cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart-count">0</span>
+            </a>
+        </nav>
+    </header>
+
+    <main class="shop-container">
+        <div class="section-title">
+            <h2>আমাদের <span class="green-text">তাজা পণ্যসমূহ</span></h2>
+        </div>
+        <div class="shop-categories">
+        <button class="shop-cat-btn active" onclick="filterCategory('all')">সব পণ্য</button>
+        <button class="shop-cat-btn" onclick="filterCategory('vegetable')"><i class="fa-solid fa-carrot"></i> তাজা সবজি</button>
+        <button class="shop-cat-btn" onclick="filterCategory('fruit')"><i class="fa-solid fa-apple-whole"></i> ফলমূল</button>
+        <button class="shop-cat-btn" onclick="filterCategory('dairy')"><i class="fa-solid fa-cow"></i> ডেইরি ও ডিম</button>
+        <button class="shop-cat-btn" onclick="filterCategory('spice')"><i class="fa-solid fa-mortar-pestle"></i> খাঁটি মসলা</button>
+        </div>
+
+        <div class="product-grid">
+
+            <div class="product-card vegetable">
+                <span class="badge-discount">-২০%</span> 
+                <div class="img-box">
+                    <img src="images/amerahgalal_pindown.io_1779292050.png" alt="Tomato">
+                </div>
+                <h3>তাজা লাল টমেটো</h3>
+                <p>১ কেজি</p>
+                <div class="stock-box">
+                    <div class="stock-text">স্টক আছে: <span>৫ কেজি</span></div>
+                    <div class="stock-bar"><div class="stock-progress" style="width: 30%;"></div></div>
+                </div>
+                <div class="price-box">
+                    <div class="price-wrapper">
+                        <span class="old-price">৳১০০</span>
+                        <span class="price">৳৮০</span>
+                    </div>
+                    <button class="add-btn" onclick="addToCart('তাজা লাল টমেটো', 80, 'images/amerahgalal_pindown.io_1779292050.png')">যোগ করুন</button>
+                    
+                </div>
+            </div>
+
+            <div class="product-card vegetable">
+                <span class="badge-discount">-২০%</span> 
+                <div class="img-box">
+                    <img src="images/cathfairey_pindown.io_1779292641.jpg" alt="Potato">
+                </div>
+                <h3>দেশি ফ্রেশ আলু</h3>
+                <p>১ কেজি</p>
+                <div class="stock-box">
+                    <div class="stock-text">স্টক আছে: <span>৫ কেজি</span></div>
+                    <div class="stock-bar"><div class="stock-progress" style="width: 40%;"></div></div>
+                </div>
+                <div class="price-box">
+                    <div class="price-wrapper">
+                        <span class="old-price">৳৫০</span>
+                        <span class="price">৳৪০</span>
+                    </div>
+                    <button class="add-btn" onclick="addToCart('দেশি ফ্রেশ আলু', 40, 'images/cathfairey_pindown.io_1779292641.jpg')">যোগ করুন</button>
+                </div>
+            </div>
+            <div class="product-card vegetable">
+                <span class="badge-discount">-২০%</span> 
+                <div class="img-box">
+                    <img src="images/Life080615_pindown.io_1779333924.jpg" alt="Carrot">
+                </div>
+                <h3>দেশি ফ্রেশ গাজর</h3>
+                <p>১ কেজি</p>
+                <div class="stock-box">
+                    <div class="stock-text">স্টক আছে: <span>৫ কেজি</span></div>
+                    <div class="stock-bar"><div class="stock-progress" style="width: 40%;"></div></div>
+                </div>
+                <div class="price-box">
+                    <div class="price-wrapper">
+                        <span class="old-price">৳৫০</span>
+                        <span class="price">৳৪০</span>
+                    </div>
+                    <button class="add-btn" onclick="addToCart('দেশি ফ্রেশ গাজর', 40, 'images/Life080615_pindown.io_1779333924.jpg')">যোগ করুন</button>
+                </div>
+            </div>
+            <div class="product-card vegetable">
+                <span class="badge-discount">-২০%</span> 
+                <div class="img-box">
+                    <img src="images/dvanourek_pindown.io_1779334247.jpg" alt="Cucumber">
+                </div>
+                <h3>তাজা শসা</h3>
+                <p>১ কেজি</p>
+                <div class="stock-box">
+                    <div class="stock-text  ">স্টক আছে: <span>৫ কেজি</span></div>
+                    <div class="stock-bar"><div class="stock-progress" style="width: 30%;"></div></div>
+                </div> 
+                <div class="price-box">
+                    <div class="price-wrapper">
+                        <span class="old-price">৳১০০</span>
+                        <span class="price">৳৮০</span>
+                    </div>
+                    <button class="add-btn" onclick="addToCart('তাজা শসা', 80, 'images/dvanourek_pindown.io_1779334247.jpg')">যোগ করুন</button>       
+                </div>
+            </div>  
+            <div class="product-card vegetable">
+                <span class="badge-discount">-২০%</span> 
+                <div class="img-box">
+                    <img src="images/antonicamposguamuro_pindown.io_1779334202.jpg" alt="Pumpkin">
+                </div>
+                <h3>তাজা মিষ্টি কুমড়া</h3>
+                <p>১ কেজি</p>
+                <div class="stock-box">
+                    <div class="stock-text">স্টক আছে: <span>৫ কেজি</span></div>
+                    <div class="stock-bar"><div class="stock-progress" style="width: 30%;"></div></div>
+                </div>
+                <div class="price-box">
+                    <div class="price-wrapper">
+                        <span class="old-price">৳১০০</span>
+                        <span class="price">৳৮০</span>
+                    </div>
+                    <button class="add-btn" onclick="addToCart('তাজা মিষ্টি কুমড়া', 80, 'images/antonicamposguamuro_pindown.io_1779334202.jpg')">যোগ করুন</button>   
+                </div>
+            </div> 
+            <div class="product-card vegetable">
+                <span class="badge-discount">-২০%</span> 
+                <div class="img-box">
+                    <img src="images/madhaviaruri_pindown.io_1779334284.jpg" alt="Brinjal/Eggplant">
+                </div>
+                <h3>তাজা বেগুন</h3>
+                <p>১ কেজি</p>
+                <div class="stock-box">
+                    <div class="stock-text">স্টক আছে: <span>৫ কেজি</span></div>
+                    <div class="stock-bar"><div class="stock-progress" style="width: 30%;"></div></div>
+                </div>
+                <div class="price-box">
+                    <div class="price-wrapper">
+                        <span class="old-price">৳১০০</span>
+                        <span class="price">৳৮০</span>
+                    </div>
+                    <button class="add-btn" onclick="addToCart('তাজা বেগুন', 80, 'images/madhaviaruri_pindown.io_1779334284.jpg')">যোগ করুন</button>   
+                </div>
+            </div> 
+             <div class="product-card vegetable">
+                <span class="badge-discount">-২০%</span> 
+                <div class="img-box">
+                    <img src="images/hewitt1023_pindown.io_1779334420.jpg" alt="Cauliflower">
+                </div>
+                <h3>তাজা ফুলকপি</h3>
+                <p>১ কেজি</p>
+                <div class="stock-box">
+                    <div class="stock-text">স্টক আছে: <span>৫ কেজি</span></div>
+                    <div class="stock-bar"><div class="stock-progress" style="width: 30%;"></div></div>
+                </div>
+                <div class="price-box">
+                    <div class="price-wrapper">
+                        <span class="old-price">৳১০০</span>
+                        <span class="price">৳৮০</span>
+                    </div>
+                    <button class="add-btn" onclick="addToCart('তাজা ফুলকপি', 80, 'images/hewitt1023_pindown.io_1779334420.jpg')">যোগ করুন</button>   
+                </div>
+            </div> 
+           
+             <div class="product-card vegetable">
+                <span class="badge-discount">-২০%</span> 
+                <div class="img-box">
+                    <img src="images/ritawilloughby3_pindown.io_1779334374.jpg" alt="Garlic">
+                </div>
+                <h3>তাজা রসুন</h3>
+                <p>১ কেজি</p>
+                <div class="stock-box">
+                    <div class="stock-text">স্টক আছে: <span>৫ কেজি</span></div>
+                    <div class="stock-bar"><div class="stock-progress" style="width: 30%;"></div></div>
+                </div>
+                <div class="price-box">
+                    <div class="price-wrapper">
+                        <span class="old-price">৳১০০</span>
+                        <span class="price">৳৮০</span>
+                    </div>
+                    <button class="add-btn" onclick="addToCart('তাজা রসুন', 80, 'images/ritawilloughby3_pindown.io_1779334374.jpg')">যোগ করুন</button>   
+                </div>
+            </div> 
+            <div class="product-card vegetable">
+                <span class="badge-discount">-২০%</span> 
+                <div class="img-box">
+                    <img src="images/sachinvs231_pindown.io_1779334317.jpg" alt="Onion">
+                </div>
+                <h3>তাজা পেঁয়াজ</h3>
+                <p>১ কেজি</p>
+                <div class="stock-box">
+                    <div class="stock-text">স্টক আছে: <span>৫ কেজি</span></div>
+                    <div class="stock-bar"><div class="stock-progress" style="width: 30%;"></div></div>
+                </div>
+                <div class="price-box">
+                    <div class="price-wrapper">
+                        <span class="old-price">৳১০০</span>
+                        <span class="price">৳৮০</span>
+                    </div>
+                    <button class="add-btn" onclick="addToCart('তাজা পেঁয়াজ', 80, 'images/sachinvs231_pindown.io_1779334317.jpg')">যোগ করুন</button>   
+                </div>
+            </div> 
+            <div class="product-card vegetable">
+                <span class="badge-discount">-২০%</span> 
+                <div class="img-box">
+                    <img src="images/didapur_pindown.io_1779334082.jpg" alt="Red Chili">
+                </div>
+                <h3>তাজা লাল মরিচ</h3>
+                <p>১ কেজি</p>
+                <div class="stock-box">
+                    <div class="stock-text">স্টক আছে: <span>৫ কেজি</span></div>
+                    <div class="stock-bar"><div class="stock-progress" style="width: 30%;"></div></div>
+                </div>
+                <div class="price-box">
+                    <div class="price-wrapper">
+                        <span class="old-price">৳১০০</span>
+                        <span class="price">৳৮০</span>
+                    </div>
+                    <button class="add-btn" onclick="addToCart('তাজা লাল মরিচ', 80, 'images/didapur_pindown.io_1779334082.jpg')">যোগ করুন</button>   
+                </div>
+            </div> 
+
+
+
+
+            <div class="product-card vegetable">
+                <span class="badge-discount">-২০%</span> 
+                <div class="img-box">
+                    <img src="images/museandmystic_pindown.io_1779334478.jpg" alt="Ginger">
+                </div>
+                <h3>তাজা আদা</h3>
+                <p>১ কেজি</p>
+                <div class="stock-box">
+                    <div class="stock-text">স্টক আছে: <span>৫ কেজি</span></div>
+                    <div class="stock-bar"><div class="stock-progress" style="width: 30%;"></div></div>
+                </div>
+                <div class="price-box">
+                    <div class="price-wrapper">
+                        <span class="old-price">৳১০০</span>
+                        <span class="price">৳৮০</span>
+                    </div>
+                    <button class="add-btn" onclick="addToCart('তাজা আদা', 80, 'images/museandmystic_pindown.io_1779334478.jpg')">যোগ করুন</button>   
+                </div>
+            </div> 
+            <div class="product-card vegetable">
+                <span class="badge-discount">-২০%</span> 
+                <div class="img-box">
+                    <img src="images/samarendrabhatt_pindown.io_1779337844.jpg" alt="French Beans ">
+                </div>
+                <h3>তাজা  বরবটি </h3>
+                <p>১ কেজি</p>
+                <div class="stock-box">
+                    <div class="stock-text">স্টক আছে: <span>৫ কেজি</span></div>
+                    <div class="stock-bar"><div class="stock-progress" style="width: 30%;"></div></div>
+                </div>
+                <div class="price-box">
+                    <div class="price-wrapper">
+                        <span class="old-price">৳১০০</span>
+                        <span class="price">৳৮০</span>
+                    </div>
+                    <button class="add-btn" onclick="addToCart('তাজা  বরবটি ', 80, 'images/samarendrabhatt_pindown.io_1779337844.jpg')">যোগ করুন</button>   
+                </div>
+            </div> 
+
+
+
+
+            <div class="product-card dairy">
+                <span class="badge-discount">-২০%</span> 
+                <div class="img-box">
+                    <img src="images/nicolabaccile2_pindown.io_1779292847.png" alt="Egg">
+                </div>
+                <h3>ফার্মের মুরগির ডিম</h3>
+                <p>১ ডজন</p>
+                <div class="stock-box">
+                    <div class="stock-text">স্টক আছে: <span>২০০টি পিস</span></div>
+                    <div class="stock-bar"><div class="stock-progress" style="width: 75%;"></div></div>
+                </div>
+                <div class="price-box">
+                    <div class="price-wrapper">
+                        <span class="old-price">৳১৪৫</span>
+                        <span class="price">৳১১৬</span>
+                    </div>
+                    <button class="add-btn" onclick="addToCart('ফার্মের মুরগির ডিম', 116, 'images/nicolabaccile2_pindown.io_1779292847.png')">যোগ করুন</button>
+                </div>
+            </div>
+
+            <div class="product-card dairy">
+                <span class="badge-discount">-২০%</span> 
+                <div class="img-box">
+                    <img src="images/beckyjam_pindown.io_1779293134.jpg" alt="Milk">
+                </div>
+                <h3>খাঁটি গরুর দুধ</h3>
+                <p>১ লিটার</p>
+                <div class="stock-box">
+                    <div class="stock-text">স্টক আছে: <span>৫০ লিটার</span></div>
+                    <div class="stock-bar"><div class="stock-progress" style="width: 50%;"></div></div>
+                </div>
+                <div class="price-box">
+                    <div class="price-wrapper">
+                        <span class="old-price">৳৯০</span>
+                        <span class="price">৳৭২</span>
+                    </div>
+                    <button class="add-btn" onclick="addToCart('খাঁটি গরুর দুধ', 72, 'images/beckyjam_pindown.io_1779293134.jpg')">যোগ করুন</button>
+                </div>
+            </div>
+            <div class="product-card dairy">
+                <span class="badge-discount">-২০%</span> 
+                <div class="img-box">
+                    <img src="images/graphicvector007_pindown.io_1779361620.png" alt="Yogurt">
+                </div>
+                <h3>খাঁটি দই</h3>
+                <p>১ কেজি</p>
+                <div class="stock-box">
+                    <div class="stock-text">স্টক আছে: <span>৫০ কেজি</span></div>    
+                    <div class="stock-bar"><div class="stock-progress" style="width: 50%;"></div></div>
+                </div>  
+                <div class="price-box">
+                    <div class="price-wrapper">
+                        <span class="old-price">৳৯০</span>
+                        <span class="price">৳৭২</span>
+                    </div>
+                    <button class="add-btn" onclick="addToCart('খাঁটি দই', 72, 'images/graphicvector007_pindown.io_1779361620.png')">যোগ করুন</button>
+                </div>
+            </div>
+                <div class="product-card dairy">
+                    <span class="badge-discount">-২০%</span> 
+                    <div class="img-box">
+                        <img src="images/marikpmu_pindown.io_1779360892.webp" alt="Butter">
+                    </div>
+                    <h3>খাঁটি মাখন</h3>
+                    <p>২০০ গ্রাম</p>
+                    <div class="stock-box">
+                        <div class="stock-text">স্টক আছে: <span>২০ কেজি</span></div>        
+                        <div class="stock-bar"><div class="stock-progress" style="width: 50%;"></div></div>
+                    </div>
+                    <div class="price-box">
+                        <div class="price-wrapper">
+                            <span class="old-price">৳২০০</span>
+                            <span class="price">৳১৬০</span>
+                        </div>
+                        <button class="add-btn" onclick="addToCart('খাঁটি মাখন', 160, 'images/marikpmu_pindown.io_1779360892.webp')">যোগ করুন</button>
+                    </div>
+                </div>
+                <div class="product-card dairy">
+                    <span class="badge-discount">-২০%</span> 
+                    <div class="img-box">       
+                        <img src="images/lunaslavender_pindown.io_1779361044.jpg" alt="Powdered Milk">
+                    </div>  
+                    <h3>গুঁড়ো দুধ</h3>
+                    <p>২০০ গ্রাম</p>
+                    <div class="stock-box">
+                        <div class="stock-text"> স্টক আছে: <span>২০ কেজি</span></div>        
+                        <div class="stock-bar"><div class="stock-progress" style="width: 50%;"></div></div>
+                    </div>
+                    <div class="price-box">
+                        <div class="price-wrapper">
+                            <span class="old-price">৳২০০</span>
+                            <span class="price">৳১৬০</span>
+                        </div>
+                        <button class="add-btn" onclick="addToCart('গুঁড়ো দুধ', 160, 'images/lunaslavender_pindown.io_1779361044.jpg')">যোগ করুন</button>
+                    </div>
+                </div>
+                <div class="product-card dairy">
+                    <span class="badge-discount">-২০%</span> 
+                    <div class="img-box">       
+                        <img src="images/kimikimimartinez_pindown.io_1779361819.jpg" alt="Cheese">
+                    </div>  
+                    <h3>খাঁটি চিজ</h3>
+                    <p>২০০ গ্রাম</p>
+                    <div class="stock-box">
+                        <div class="stock-text  "> স্টক আছে: <span>২০ কেজি</span></div> 
+                        <div class="stock-bar"><div class="stock-progress" style="width: 50%;"></div></div>
+                    </div>
+                    <div class="price-box">
+                        <div class="price-wrapper">
+                            <span class="old-price">৳২০০</span>
+                            <span class="price">৳১৬০</span>
+                        </div>
+                        <button class="add-btn" onclick="addToCart('খাঁটি চিজ', 160, 'images/kimikimimartinez_pindown.io_1779361819.jpg')">যোগ করুন</button>
+                    </div>  
+                </div>
+
+
+            <div class="product-card fruit">
+                <span class="badge-discount">-২০%</span>
+                <div class="img-box">
+                    <img src="images/g8249001_pindown.io_1779293709.jpg" alt="Watermelon">                           
+                </div>
+                <h3>ফ্রেশ ওয়াটারমেলন</h3>
+                <p>১ কেজি</p>
+                <div class="stock-box">
+                    <div class="stock-text">স্টক আছে: <span>১০ কেজি</span></div>
+                    <div class="stock-bar"><div class="stock-progress" style="width: 80%;"></div></div>
+                </div>
+                <div class="price-box">
+                    <div class="price-wrapper">
+                        <span class="old-price">৳১০০</span>
+                        <span class="price">৳৮০</span>
+                    </div>
+                    <button class="add-btn" onclick="addToCart('ফ্রেশ ওয়াটারমেলন', 80, 'images/g8249001_pindown.io_1779293709.jpg')">যোগ করুন</button>
+                </div>
+            </div>
+            <div class="product-card fruit">
+                <span class="badge-discount">-২০%</span>
+                <div class="img-box">
+                    <img src="images/adajello_pindown.io_1779295087.jpg" alt="Banana">                           
+                </div>
+                <h3>ফ্রেশ বানানা</h3>
+                <p>১ ডজন</p>
+                <div class="stock-box">
+                    <div class="stock-text">স্টক আছে: <span>১৫ ডজন</span></div>
+                    <div class="stock-bar"><div class="stock-progress" style="width: 0%;"></div></div> 
+                </div>
+                <div class="price-box">
+                    <div class="price-wrapper">
+                        <span class="old-price">৳১০০</span>
+                        <span class="price">৳৮০</span>
+                    </div>
+                    <button class="add-btn" onclick="addToCart('ফ্রেশ বানানা', 80, 'images/adajello_pindown.io_1779295087.jpg')">যোগ করুন</button>
+                </div>
+            </div>
+            <div class="product-card fruit">
+                <span class="badge-discount">-২০%</span>
+                <div class="img-box">
+                    <img src="images/cmpdrx_pindown.io_1779293834.jpg" alt="Sweet Orange">                           
+                </div>
+                <h3> মিষ্টি কমলা</h3>
+                <p>১ কেজি</p>
+                <div class="stock-box">
+                    <div class="stock-text">স্টক আছে: <span>১০ কেজি</span></div>
+                    <div class="stock-bar"><div class="stock-progress" style="width: 80%;"></div></div>
+                </div>   
+                <div class="price-box">
+                    <div class="price-wrapper">
+                        <span class="old-price">৳৫০০</span>
+                        <span class="price">৳৪০০</span>
+                    </div>
+                    <button class="add-btn" onclick="addToCart('মিষ্টি কমলা', 400, 'images/cmpdrx_pindown.io_1779293834.jpg')">যোগ করুন</button>       
+                </div>
+            </div>   
+            <div class="product-card fruit">
+                <span class="badge-discount">-২০%</span>
+                <div class="img-box">
+                    <img src="images/singhjasser_pindown.io_1779334340.jpg" alt="Guava">                           
+                </div>
+                <h3> মিষ্টি পেয়ারা</h3>
+                <p>১ কেজি</p>
+                <div class="stock-box">
+                    <div class="stock-text">স্টক আছে: <span>১০ কেজি</span></div>
+                    <div class="stock-bar"><div class="stock-progress" style="width: 80%;"></div></div>
+                </div>   
+                <div class="price-box">
+                    <div class="price-wrapper">
+                        <span class="old-price">৳১০০</span>
+                        <span class="price">৳৮০</span>
+                    </div>
+                    <button class="add-btn" onclick="addToCart('মিষ্টি পেয়ারা', 80, 'images/singhjasser_pindown.io_1779334340.jpg')">যোগ করুন</button>       
+                </div>
+            </div>  
+            <div class="product-card spice">
+                <span class="badge-discount">-২০%</span>
+                <div class="img-box">
+                    <img src="images/berlinspiceman_pindown.io_1779358689.jpg" alt="Cardamom">                           
+                </div>
+                <h3> এলাচ </h3>
+                <p>১০০গ্রাম</p>
+                <div class="stock-box">
+                    <div class="stock-text  ">স্টক আছে: <span>১০ কেজি</span></div>
+                    <div class="stock-bar"><div class="stock-progress" style="width:    80%;"></div></div>
+                </div>
+                <div class="price-box">
+                    <div class="price-wrapper">
+                        <span class="old-price">৳১০০</span>
+                        <span class="price">৳৮০</span>
+                    </div>
+                    <button class="add-btn" onclick="addToCart('এলাচ', 80, 'images/berlinspiceman_pindown.io_1779358689.jpg')">যোগ করুন</button>
+                </div>  
+            </div>
+            <div class="product-card spice">
+                <span class="badge-discount">-২০%</span>
+                <div class="img-box">
+                    <img src="images/pushpachandramali_pindown.io_1779358867.jpg" alt="Cinnamon">                           
+                </div>
+                <h3> দারচিনি </h3>
+                <p>১০০গ্রাম</p>
+                <div class="stock-box">
+                    <div class="stock-text  ">স্টক আছে: <span>১০ কেজি</span></div>
+                    <div class="stock-bar"><div class="stock-progress" style="width:    80%;"></div></div>
+                </div>      
+                <div class="price-box">
+                    <div class="price-wrapper">
+                        <span class="old-price">৳১০০</span>
+                        <span class="price">৳৮০</span>
+                    </div>
+                    <button class="add-btn" onclick="addToCart('দারচিনি', 80, 'images/pushpachandramali_pindown.io_1779358867.jpg')">যোগ করুন</button>
+                </div>  
+            </div>
+            <div class="product-card spice">
+                <span class="badge-discount">-২০%</span>
+                <div class="img-box">
+                    <img src="images/besirkemal_pindown.io_1779358558.jpg" alt="Cumin">                           
+                </div>
+                <h3> জিরা </h3>
+                <p>১০০গ্রাম</p>
+                <div class="stock-box">
+                    <div class="stock-text  ">স্টক আছে: <span>১০ কেজি</span></div>
+                    <div class="stock-bar"><div class="stock-progress" style="width:    80%;"></div></div>
+                </div>  
+                <div class="price-box">
+                    <div class="price-wrapper">
+                        <span class="old-price">৳১০০</span>
+                        <span class="price">৳৮০</span>
+                    </div>
+                    <button class="add-btn" onclick="addToCart('জিরা', 80, 'images/besirkemal_pindown.io_1779358558.jpg')">যোগ করুন</button>
+                </div>  
+            </div>
+            <div class="product-card spice">
+                <span class="badge-discount">-২০%</span>
+                <div class="img-box">
+                    <img src="images/priyadarshinisvct_pindown.io_1779358385.png" alt="Turmeric">                           
+                </div>
+                <h3> হলুদ </h3>
+                <p>১০০গ্রাম</p>
+                <div class="stock-box">
+                    <div class="stock-text  ">স্টক আছে: <span>১০ কেজি</span></div>
+                    <div class="stock-bar"><div class="stock-progress" style="width:    80%;"></div></div>
+                </div>
+                <div class="price-box">
+                    <div class="price-wrapper">
+                        <span class="old-price">৳১০০</span>
+                        <span class="price">৳৮০</span>
+                    </div>
+                    <button class="add-btn" onclick="addToCart('হলুদ', 80, 'images/priyadarshinisvct_pindown.io_1779358385.png')">যোগ করুন</button>
+                </div>  
+            </div>
+            <div class="product-card spice">
+                <span class="badge-discount">-২০%</span>
+                <div class="img-box">
+                    <img src="images/kyadamehul19_pindown.io_1779358452.png" alt="Chili Powder">                           
+                </div>
+                <h3> মরিচ </h3>
+                <p>১০০গ্রাম</p>
+                <div class="stock-box">
+                    <div class="stock-text  ">স্টক আছে: <span>১০ কেজি</span></div>  
+                    <div class="stock-bar"><div class="stock-progress" style="width:    80%;"></div></div>    
+                </div>
+                <div class="price-box">    
+                    <div class="price-wrapper">
+                        <span class="old-price">৳১০০</span>
+                        <span class="price">৳৮০</span>
+                    </div>
+                    <button class="add-btn" onclick="addToCart('মরিচ', 80, 'images/kyadamehul19_pindown.io_1779358452.png')">যোগ করুন</button>
+                </div>  
+            </div> 
+            <div class="product-card spice">
+                <span class="badge-discount">-২০%</span>
+                <div class="img-box">
+                    <img src="images/yosnzee_pindown.io_1779358626.png" alt="Salt">                           
+                </div>
+                <h3>  লবণ</h3>
+                <p>১০০গ্রাম</p>
+                <div class="stock-box">
+                    <div class="stock-text  ">স্টক আছে: <span>১০ কেজি</span></div>  
+                    <div class="stock-bar"><div class="stock-progress" style="width:    80%;"></div></div>
+                </div>
+                <div class="price-box"> 
+                    <div class="price-wrapper">
+                        <span class="old-price">৳১০০</span>
+                        <span class="price">৳৮০</span>
+                    </div>                  
+                    <button class="add-btn" onclick="addToCart('লবণ', 80, 'images/yosnzee_pindown.io_1779358626.png')">যোগ করুন</button>
+                </div>  
+            </div>
+            <div class="product-card spice">
+                <span class="badge-discount">-২০%</span>
+                <div class="img-box">
+                    <img src="images/irfan5188_pindown.io_1779359134.jpg" alt="Black Salt">                           
+                </div>
+                <h3>  বিট লবণ </h3>
+                <p>১০০গ্রাম</p>
+                <div class="stock-box">
+                    <div class="stock-text  ">স্টক আছে: <span>১০ কেজি</span></div>
+                    <div class="stock-bar"><div class="stock-progress" style="width:    80%;"></div></div>
+                </div>  
+                <div class="price-box">
+                    <div class="price-wrapper">
+                        <span class="old-price">৳১০০</span>
+                        <span class="price">৳৮০</span>
+                    </div>
+                    <button class="add-btn" onclick="addToCart('বিট লবণ', 80, 'images/irfan5188_pindown.io_1779359134.jpg')">যোগ করুন</button>
+                </div>  
+            </div>
+
+    </main>
+
+    <script src="app.js"></script>
+     
+</body>
+</html>

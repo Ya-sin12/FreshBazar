@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>চেকআউট | FreshBazar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="index.html">Fresh<span>Bazar</span></a></div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="cart.html">Cart</a> 
+                <a href="checkout.html" class="active">Checkout</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="shop-container max-width-checkout">
+        <div class="section-title">
+            <h2>ডেলিভারি <span class="green-text">তথ্য দিন</span></h2>
+        </div>
+
+        <form class="checkout-form">
+            <div class="input-group">
+                <label>আপনার নাম</label>
+                <input type="text" placeholder="যেমন: ইয়াসিন" required>
+            </div>
+
+            <div class="input-group">
+                <label>মোবাইল নম্বর</label>
+                <input type="tel" placeholder="01XXXXXXXXX" required>
+            </div>
+
+            <div class="input-group">
+                <label>ডেলিভারি ঠিকানা</label>
+                <textarea placeholder="আপনার এলাকা, রোড ও বাসা নম্বর লিখুন" rows="3" required></textarea>
+            </div>
+
+            <div class="payment-notice">
+                <i class="fa-solid fa-circle-check"></i> ক্যাশ অন ডেলিভারি (পণ্য হাতে পেয়ে টাকা দেবেন)
+            </div>
+            
+            <button type="button" class="confirm-btn" onclick="alert('ধন্যবাদ ইয়াসিন ভাই! আপনার অর্ডারটি সফলভাবে সম্পন্ন হয়েছে।'); clearCartAfterOrder(); window.location.href='index.html';">অর্ডার কনফর্ম করুন</button>
+        </form>
+    </main>
+        <script src="app.js"></script>
+</body>
+</html>
