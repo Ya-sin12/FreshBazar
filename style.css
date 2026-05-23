@@ -928,7 +928,9 @@ header {
     color: #444;
 }
 .info-item p {
+    margin: 0;
     line-height: 1; /* লাইন সোজা রাখবে */
+   
 }
 .info-item i {
     color: #2bb673; /* আপনার থিম কালার অনুযায়ী পরিবর্তন করতে পারেন */
