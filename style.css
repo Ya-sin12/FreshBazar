@@ -927,10 +927,15 @@ header {
     font-size: 1.1rem;
     color: #444;
 }
-
+.info-item p {
+    margin: 0; /* লেখার বাড়তি মার্জিন কেটে দেবে */
+    line-height: 1; /* লাইন সোজা রাখবে */
+}
 .info-item i {
     color: #2bb673; /* আপনার থিম কালার অনুযায়ী পরিবর্তন করতে পারেন */
     font-size: 1.3rem;
+    display: flex;
+    align-items: center;
 }
 
 .contact-form input, .contact-form textarea {
