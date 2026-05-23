@@ -883,3 +883,89 @@ header {
     font-size: 0.8rem;
     font-weight: bold;
 }
+/* কন্টাক্ট সেকশন সিএসএস */
+.contact-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-container h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact-container p {
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.contact-info, .contact-form {
+    flex: 1;
+    min-width: 280px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+.info-item i {
+    color: #2bb673; /* আপনার থিম কালার অনুযায়ী পরিবর্তন করতে পারেন */
+    font-size: 1.3rem;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #2bb673;
+}
+
+.submit-btn {
+    background-color: #2bb673;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #1a202c;
+}
+
+/* মোবাইল রেসপনসিভ */
+@media (max-width: 768px) {
+    .contact-wrapper {
+        flex-direction: column;
+    }
+}
