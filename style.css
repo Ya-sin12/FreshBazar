@@ -921,7 +921,6 @@ header {
 
 .info-item {
     display: flex;
-    align-items: center;
     gap: 15px;
     margin-bottom: 20px;
     font-size: 1.1rem;
@@ -929,14 +928,16 @@ header {
 }
 .info-item p {
     margin: 0;
-    line-height: 1; /* লাইন সোজা রাখবে */
+    line-height: 1 /* লাইন সোজা রাখবে */
+   
    
 }
 .info-item i {
     color: #2bb673; /* আপনার থিম কালার অনুযায়ী পরিবর্তন করতে পারেন */
     font-size: 1.3rem;
     display: flex;
-    align-items: center;
+    margin-top: 4px;
+    
 }
 
 .contact-form input, .contact-form textarea {
