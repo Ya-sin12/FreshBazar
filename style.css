@@ -298,7 +298,7 @@ header {
 /* প্রোমো ব্যানার */
 .offer-banner {
     max-width: 1200px;
-    margin: 50px max(15px, auto);
+    margin: 50px auto;
     padding: 60px 20px;
     background: linear-gradient(135deg, #1a202c 0%, #2bb673 100%);
     border-radius: 20px;
@@ -393,7 +393,10 @@ header {
 
 /* মোবাইলের জন্য ব্যানার ফিক্স */
 @media (max-width: 768px) {
-    .offer-banner h2 {
+   .offer-banner {
+        margin: 20px 15px;
+    }
+   .offer-banner h2 {
         font-size: 1.6rem;
     }
     .offer-banner p {
