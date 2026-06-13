@@ -136,3 +136,38 @@ document.addEventListener("DOMContentLoaded", () => {
     displayCart();
     updateCartCounter(); 
 });
+// ২৪ ঘণ্টার লাইভ কাউন্টডাউন টাইমার
+function startCountdown() {
+    // অফার শেষ হওয়ার একটা সময় সেট করি (আজ থেকে ২৪ ঘণ্টা পর)
+    let countdownDate = localStorage.getItem('offer_end_time');
+    
+    if (!countdownDate) {
+        countdownDate = new Date().getTime() + (24 * 60 * 60 * 1000); // ২৪ ঘণ্টা মিলিসেকেন্ডে
+        localStorage.setItem('offer_end_time', countdownDate);
+    }
+
+    const timerInterval = setInterval(function() {
+        const now = new Date().getTime();
+        const distance = countdownDate - now;
+
+        // ঘণ্টা, মিনিট এবং সেকেন্ড হিসাব করা
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // স্ক্রিনে সংখ্যাগুলো বসানো
+        document.getElementById("hours").innerHTML = hours < 10 ? "0" + hours : hours;
+        document.getElementById("minutes").innerHTML = minutes < 10 ? "0" + minutes : minutes;
+        document.getElementById("seconds").innerHTML = seconds < 10 ? "0" + seconds : seconds;
+
+        // সময় শেষ হয়ে গেলে আবার নতুন করে ২৪ ঘণ্টা শুরু হবে (লুপ)
+        if (distance < 0) {
+            const newEndTime = new Date().getTime() + (24 * 60 * 60 * 1000);
+            localStorage.setItem('offer_end_time', newEndTime);
+            countdownDate = newEndTime;
+        }
+    }, 1000);
+}
+
+// পেজ লোড হলেই টাইমার চালু হবে
+window.onload = startCountdown;
